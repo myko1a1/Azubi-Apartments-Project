@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Kite+One&family=Magra:wght@400;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.background-field {
+    width: 100%;
+    height: 80vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.background-field img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    z-index: 1;
+}
+
+
+.background-content {
+    width: 1280px;
+    height: 90%;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+.header-container {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1100px;
+    align-items: center;
+}
+
+.header-container a {
+    display: flex;
+    align-items: center;
+}
+
+img.logo {
+    height: 60px;
+    width: auto;
+}
+
+img.login-button {
+    height: 40px;
+    width: 40px;  
+}
+
+.content-borders {
+    width: 1280px;
+    height: 500px;
+    background-color: aqua;
+}
+.background-text{
+    width: 1000px;
+    height: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.background-text h1{
+    font-family: "Magra", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 54px;
+    color: white;
+}
+.background-text h2{
+    font-family: "Kite One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 54px;
+    color: #c0ff72;
+}
+.search-field{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.search-box{
+    width: 460px;
+    height: 95%;
+    background-color: white;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+#selected-city{
+    width: 220px;
+    position: relative;
+    right: 25px;
+    padding: 2vh;
+    border-radius: 30px;
+    background-color: #e5e5e5;
+    border: none;
+    font-family: "Magra", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 18px;
+    color: black;
+    text-align: center;
+}
+.search-box button{
+    width: 175px;
+    padding: 2vh;
+    border-radius: 30px;
+    background-color: #c0ff72;
+    border: none;
+    font-family: "Magra", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 18px;
+    color: black;
+    text-align: center;
+}
