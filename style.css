@@ -73,8 +73,7 @@ img.login-button {
 
 .content-borders {
     width: 1280px;
-    height: 500px;
-    background-color: aqua;
+    height: 1300px;
 }
 .background-text{
     width: 1000px;
@@ -141,4 +140,139 @@ img.login-button {
     font-size: 18px;
     color: black;
     text-align: center;
+}
+.tasks{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.tasks h2{
+    font-family: "Magra", sans-serif;
+    font-weight: 700;
+    font-size: 48px;
+}
+.tasks p{
+    font-family: "Kite one", sans-serif;
+    font-size: 24px;
+}
+.such-helper-block{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: space-between;
+}
+.description{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.description h2{
+    font-family: "Magra", sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    padding-bottom: 40px;
+}
+.description p{
+    font-family: "Magra", sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    padding-bottom: 40px;
+}
+.link-button{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.link-button a{
+    background-color: #c0ff72;
+    padding: 20%;
+    border-radius: 50%;
+    transition: 500ms;
+}
+.link-button a:hover{
+    background-color: #dbfeaf;
+    padding: 20%;
+    border-radius: 50%;
+    transition: 500ms;
+    transform: scale(1.1);
+}
+.link-button img{
+    width: 100%;
+    height: 100%;
+}
+.link-button{
+    font-family: "Magra", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.add-apart-block{
+    width: 100%;
+    height: 400px;
+    padding-top: 150px;
+}
+.add-apart-text{
+    width: 100%;
+    height: 100px;
+}
+.add-apart-text h2{
+    font-family: "Magra", sans-serif;
+    font-weight: 700;
+    font-size: 48px;
+}
+.add-apart-text p{
+    font-family: "Magra", sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+}
+.add-apart-button-field{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.add-apart-button-field a{
+    padding: 50px;
+    background-color: #c0ff72;
+    border-radius: 20px;
+    font-family: "Magra", sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    text-decoration: none;
+    color: black;
+    transition: 500ms;
+}
+
+.add-apart-button-field a:hover{
+    background-color: #dbfeaf;
+    transition: 500ms;
+    transform: scale(1.1);
+}
+footer{
+    width: 100%;
+    height: 100px;
+    background-color: #e2e3e5;
+    position: relative;
+    top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: "Magra", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: #c1c1c1;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
 }
