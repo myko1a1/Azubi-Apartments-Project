@@ -39,9 +39,12 @@
             <div class="apartment-container">
                 <img class="apartment-img" src=${item.images.main} />
                 <h2 class="apartment-title">${item.city}</h2>
-                <p>Price:${item.monthly_cost_eur} €</p>
-                <p>Rating: ${item.rating}</p>
-                <p>Description: ${item.description} </p>
+                <div class="rating-price-container">
+                <p class="apartment-price">${item.monthly_cost_eur} €</p>
+                |
+                <p class="apartment-rating">${item.rating} <img class="icon-star" src="./img/star-icon.svg" /></p>
+                </div>
+                <p class="apartment-description">${item.description}</p>
             </div> `;
                 list.appendChild(li);
             });
