@@ -3,6 +3,7 @@ ul {
   list-style: none;
 }
 
+/* Apartment Item */
 li {
   padding: 10px;
   margin: 5px 0;
@@ -10,18 +11,21 @@ li {
   border-radius: 6px;
 }
 
+/* Apartment Container */
 .apartment-container {
   width: 450px;
   background-color: #f0f0f0;
   border-radius: 15px;
 }
 
+/* Img */
 .apartment-img {
   width: 450px;
   height: 350px;
   border-radius: 15px;
 }
 
+/* List */
 .apartments-list {
   display: flex;
   gap: 20px;
@@ -31,6 +35,7 @@ li {
   background-color: white;
 }
 
+/* Title */
 .apartment-title {
   font-family: "Magra", sans-serif;
   font-weight: 800;
@@ -40,12 +45,14 @@ li {
   color: rgb(0, 0, 0);
 }
 
+/* Rating Container */
 .rating-price-container {
   display: flex;
   gap: 20px;
   padding-left: 20px;
 }
 
+/* Price */
 .apartment-price {
   font-family: "Magra", sans-serif;
   font-weight: 500;
@@ -56,6 +63,7 @@ li {
   padding: 0px;
 }
 
+/* Rating */
 .apartment-rating {
   display: flex;
   align-items: center;
@@ -68,6 +76,7 @@ li {
   padding: 0px;
 }
 
+/* Description */
 .apartment-description {
   font-family: "Magra", sans-serif;
   font-weight: 500;
@@ -82,6 +91,7 @@ li {
   padding-right: 20px;
 }
 
+/* Rating Icon */
 .icon-star {
   display: flex;
   justify-content: center;
@@ -92,12 +102,12 @@ li {
 }
 
 /* Back Home Link */
-
 .home-link {
   padding-left: 20px;
   padding-top: 60px;
 }
 
+/* Arrow back Icon */
 .arrow-icon {
   width: 45px;
   height: 45px;
