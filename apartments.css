@@ -90,3 +90,15 @@ li {
   height: 18px;
   padding-left: 5px;
 }
+
+/* Back Home Link */
+
+.home-link {
+  padding-left: 20px;
+  padding-top: 60px;
+}
+
+.arrow-icon {
+  width: 45px;
+  height: 45px;
+}
