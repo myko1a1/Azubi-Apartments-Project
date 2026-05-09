@@ -118,13 +118,13 @@ img.login-button {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 25px;
+  gap: 15px;
 }
 #selected-city {
   width: 220px;
   position: relative;
   right: 25px;
-  padding: 2vh;
+  padding: 2.5vh;
   border-radius: 30px;
   background-color: #e5e5e5;
   border: none;
@@ -134,9 +134,13 @@ img.login-button {
   font-size: 18px;
   color: black;
   text-align: center;
+  margin-left: 15px;
 }
-.search-box button {
-  width: 175px;
+.apart-search-button{
+  text-decoration: none;
+  color: black;
+  height: 4vh;
+  width: 150px;
   padding: 2vh;
   border-radius: 30px;
   background-color: #c0ff72;
@@ -146,7 +150,9 @@ img.login-button {
   font-style: normal;
   font-size: 18px;
   color: black;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .tasks {
   width: 100%;
@@ -340,12 +346,19 @@ footer {
     padding: 10px 5px;
   }
 
+  .apart-search-button{
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: black;
+  }
   .search-box button {
     width: 48%;
     font-size: 14px;
     padding: 10px 5px;
+    text-decoration: none;
+    color: black;
   }
-
   .content-borders {
     width: 100%;
     height: auto;
@@ -440,4 +453,121 @@ footer {
     top: 20px;
     border-radius: 40px 40px 0 0;
   }
+}
+
+/* APARTMENTS.HTML */
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+/* Apartment Item */
+li {
+  padding: 10px;
+  margin: 5px 0;
+  background: #ffffff;
+  border-radius: 6px;
+}
+
+/* Apartment Container */
+.apartment-container {
+  width: 450px;
+  background-color: #f0f0f0;
+  border-radius: 15px;
+}
+
+/* Img */
+.apartment-img {
+  width: 450px;
+  height: 350px;
+  border-radius: 15px;
+}
+
+/* List */
+.apartments-list {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+/* Title */
+.apartment-title {
+  font-family: "Magra", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 18px;
+  padding-left: 20px;
+  color: rgb(0, 0, 0);
+}
+
+/* Rating Container */
+.rating-price-container {
+  display: flex;
+  gap: 20px;
+  padding-left: 20px;
+}
+
+/* Price */
+.apartment-price {
+  font-family: "Magra", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 16px;
+  color: rgb(0, 0, 0);
+  margin: 0px;
+  padding: 0px;
+}
+
+/* Rating */
+.apartment-rating {
+  display: flex;
+  align-items: center;
+  font-family: "Magra", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 16px;
+  color: rgb(0, 0, 0);
+  margin: 0px;
+  padding: 0px;
+}
+
+/* Description */
+.apartment-description {
+  font-family: "Magra", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 16px;
+  color: rgb(0, 0, 0);
+  margin: 0px;
+  padding: 0px;
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  padding-right: 20px;
+}
+
+/* Rating Icon */
+.icon-star {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 18px;
+  height: 18px;
+  padding-left: 5px;
+}
+
+/* Back Home Link */
+.home-link {
+  padding-left: 20px;
+  padding-top: 60px;
+}
+
+/* Arrow back Icon */
+.arrow-icon {
+  width: 45px;
+  height: 45px;
 }

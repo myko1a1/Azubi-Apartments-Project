@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azubi Apartaments | Detail</title>
+</head>
+<body>
+    <a class="back-link" href="apartments.html">← Zurück zum Suche</a>
+    <div id="content"><p>Die Seite wartet auf einen Antwort...</p></div>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-app.js";
+        import { getDatabase, ref, get } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-database.js";
+
+        const db = getDatabase(initializeApp({
+            databaseURL: "https://azubi-apartments-project-default-rtdb.firebaseio.com"
+        }));
+
+        const id = new URLSearchParams(window.location.search).get("id");
+        const content = document.getElementById("content");
+
+        get(ref(db, `apartments/${id}`)).then(snap => {
+            if (!snap.exists()) return (content.innerHTML = "<p>Квартира не найдена.</p>");
+
+            const item = snap.val();
+            document.title = `Azubi Apartments | ${item.city}`;
+            content.innerHTML = `
+                <img class="detail-img" src="${item.images.main}" alt="${item.city}" />
+                <h1 class="detail-title">${item.city}</h1>
+                <div class="detail-meta">
+                    <span>💶 ${item.monthly_cost_eur} € / мес.</span>
+                    <span>⭐ ${item.rating}</span>
+                </div>
+                <p class="detail-description">${item.description}</p>
+            `;
+        }).catch(err => content.innerHTML = `<p>Ошибка: ${err.message}</p>`);
+    </script>
+</body>
+</html>

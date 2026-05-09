@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="apartments.css">
+    <link rel="stylesheet" href="style.css">
     <title>Azubi Apartments | Apartments</title>
 </head>
 
@@ -17,37 +17,25 @@
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-app.js";
         import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-database.js";
 
-        const firebaseConfig = {
+        const db = getDatabase(initializeApp({
             databaseURL: "https://azubi-apartments-project-default-rtdb.firebaseio.com"
-        };
-
-        const app = initializeApp(firebaseConfig);
-        const db = getDatabase(app);
+        }));
 
         const list = document.getElementById("itemList");
 
         onValue(ref(db, "apartments"), (snapshot) => {
-            list.innerHTML = "";
-
-            const data = snapshot.val();
-
-
-
-            Object.values(data).map((item) => {
-                const li = document.createElement("li");
-                li.innerHTML = `
-            <div class="apartment-container">
-                <img class="apartment-img" src=${item.images.main} />
-                <h2 class="apartment-title">${item.city}</h2>
-                <div class="rating-price-container">
-                <p class="apartment-price">${item.monthly_cost_eur} €</p>
-                |
-                <p class="apartment-rating">${item.rating} <img class="icon-star" src="./img/star-icon.svg" /></p>
-                </div>
-                <p class="apartment-description">${item.description}</p>
-            </div> `;
-                list.appendChild(li);
-            });
+            list.innerHTML = Object.entries(snapshot.val())
+                .map(([id, item]) => `
+                    <li>
+                        <div class="apartment-container" data-id="${id}" onclick="location.href='apartment-detail.html?id=${id}'">
+                            <img class="apartment-img" src="${item.images.main}" />
+                            <h2 class="apartment-title">${item.city}</h2>
+                            <p>Price: ${item.monthly_cost_eur} €</p>
+                            <p>Rating: ${item.rating}</p>
+                            <p>Description: ${item.description}</p>
+                        </div>
+                    </li>`)
+                .join("");
         });
     </script>
 </body>
