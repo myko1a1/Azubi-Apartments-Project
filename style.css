@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Kite+One&family=Magra:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Kite+One&family=Magra:wght@400;700&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -455,7 +455,7 @@ footer {
   }
 }
 
-/* APARTMENTS.HTML */
+/* APARTMENTS.HTML  ------------------------------------------------------------------------*/
 
 ul {
   padding: 0;
@@ -569,7 +569,7 @@ li {
   height: 45px;
 }
 
-/* APARTMENT-DETAIL.HTML */
+/* APARTMENT-DETAIL.HTML --------------------------------------------------------------- */
 .detail-page-body{
   display: flex;
   flex-direction: column;
@@ -581,4 +581,82 @@ li {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-bottom: 2px solid lightgray;
+  margin-bottom: 80px;
+}
+.detail-img{
+  max-width: 60vw;
+  border-radius: 15px;
+  margin-bottom: 40px;
+}
+.detail-title{
+  font-family: "Magra", sans-serif;
+  font-weight: 700;
+}
+.detail-meta{
+  font-family: "Arimo", sans-serif;
+  font-weight: 600;
+  margin-bottom: 80px;
+}
+.title-price{
+  background-color: #c0ff72;
+}
+.detail-profile{
+  width: 100%;
+  height: 150px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  font-family: "Magra", sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.detail-profile img{
+  width: 150px;
+  height: 150px;
+  background-color: gray;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.detail-description{
+  font-family: "Magra", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 80px;
+}
+.title-contact{
+  width: 100%;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.title-contact a{
+  text-decoration: none;
+  color: black;
+  background-color: #c0ff72;
+  padding: 45px 50px;
+  font-family: "Magra", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  border-radius: 30px;
+  transition: 500ms;
+}
+.title-contact a:hover{
+  transform: scale(1.1);
+  background-color: #dbfeaf;
+  transition: 500ms;
+}
+.title-footer{
+  width: 80vw;
+}
+footer a{
+  text-decoration: none;
+  background-color: #c0ff72;
+  color: black;
 }
