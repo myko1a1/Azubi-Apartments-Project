@@ -11,8 +11,28 @@ li {
   border-radius: 6px;
 }
 
+.apartment-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 20px;
+}
+
+.apartments-filter {
+  width: 250px;
+}
+
+.apartments-filter form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 /* Apartment Container */
 .apartment-container {
+  display: flex;
+  flex-direction: column;
   width: 450px;
   background-color: #f0f0f0;
   border-radius: 15px;
@@ -30,8 +50,8 @@ li {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
   background-color: white;
 }
 
@@ -54,9 +74,7 @@ li {
 
 /* Price */
 .apartment-price {
-  font-family: "Magra", sans-serif;
   font-weight: 500;
-  font-style: normal;
   font-size: 16px;
   color: rgb(0, 0, 0);
   margin: 0px;
@@ -67,9 +85,7 @@ li {
 .apartment-rating {
   display: flex;
   align-items: center;
-  font-family: "Magra", sans-serif;
   font-weight: 500;
-  font-style: normal;
   font-size: 16px;
   color: rgb(0, 0, 0);
   margin: 0px;
