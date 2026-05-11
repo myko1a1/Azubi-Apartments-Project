@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Kite+One&family=Magra:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Kite+One&family=Magra:wght@400;700&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -118,13 +118,13 @@ img.login-button {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 25px;
+  gap: 15px;
 }
 #selected-city {
   width: 220px;
   position: relative;
   right: 25px;
-  padding: 2vh;
+  padding: 2.5vh;
   border-radius: 30px;
   background-color: #e5e5e5;
   border: none;
@@ -134,9 +134,13 @@ img.login-button {
   font-size: 18px;
   color: black;
   text-align: center;
+  margin-left: 15px;
 }
-.search-box button {
-  width: 175px;
+.apart-search-button{
+  text-decoration: none;
+  color: black;
+  height: 4vh;
+  width: 150px;
   padding: 2vh;
   border-radius: 30px;
   background-color: #c0ff72;
@@ -146,7 +150,9 @@ img.login-button {
   font-style: normal;
   font-size: 18px;
   color: black;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .tasks {
   width: 100%;
@@ -340,12 +346,19 @@ footer {
     padding: 10px 5px;
   }
 
+  .apart-search-button{
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: black;
+  }
   .search-box button {
     width: 48%;
     font-size: 14px;
     padding: 10px 5px;
+    text-decoration: none;
+    color: black;
   }
-
   .content-borders {
     width: 100%;
     height: auto;
@@ -440,4 +453,212 @@ footer {
     top: 20px;
     border-radius: 40px 40px 0 0;
   }
+}
+
+/* APARTMENTS.HTML  ------------------------------------------------------------------------*/
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+
+li {
+  padding: 10px;
+  margin: 5px 0;
+  background: #ffffff;
+  border-radius: 6px;
+}
+
+
+.apartment-container {
+  width: 450px;
+  background-color: #f0f0f0;
+  border-radius: 15px;
+}
+
+
+.apartment-img {
+  width: 450px;
+  height: 350px;
+  border-radius: 15px;
+}
+
+
+.apartments-list {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+
+.apartment-title {
+  font-family: "Magra", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 18px;
+  padding-left: 20px;
+  color: rgb(0, 0, 0);
+}
+
+
+.rating-price-container {
+  display: flex;
+  gap: 20px;
+  padding-left: 20px;
+}
+
+.apartment-price {
+  font-family: "Magra", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 16px;
+  color: rgb(0, 0, 0);
+  margin: 0px;
+  padding: 0px;
+}
+
+
+.apartment-rating {
+  display: flex;
+  align-items: center;
+  font-family: "Magra", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 16px;
+  color: rgb(0, 0, 0);
+  margin: 0px;
+  padding: 0px;
+}
+
+
+.apartment-description {
+  font-family: "Magra", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 16px;
+  color: rgb(0, 0, 0);
+  margin: 0px;
+  padding: 0px;
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  padding-right: 20px;
+}
+
+.icon-star {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 18px;
+  height: 18px;
+  padding-left: 5px;
+}
+
+
+.home-link {
+  padding-left: 20px;
+  padding-top: 60px;
+}
+
+.arrow-icon {
+  width: 45px;
+  height: 45px;
+}
+
+/* APARTMENT-DETAIL.HTML --------------------------------------------------------------- */
+.detail-page-body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.detail-page-header{
+  width: 80vw;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid lightgray;
+  position: fixed;
+  background-color: white;
+}
+.detail-img{
+  max-width: 60vw;
+  border-radius: 15px;
+  margin-top: 120px;
+  margin-bottom: 40px;
+}
+.detail-title{
+  font-family: "Magra", sans-serif;
+  font-weight: 700;
+}
+.detail-meta{
+  font-family: "Arimo", sans-serif;
+  font-weight: 600;
+  margin-bottom: 80px;
+}
+.title-price{
+  background-color: #c0ff72;
+}
+.detail-profile{
+  width: 100%;
+  height: 150px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  font-family: "Magra", sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.detail-profile img{
+  width: 150px;
+  height: 150px;
+  background-color: gray;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.detail-description{
+  font-family: "Magra", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 80px;
+}
+.title-contact{
+  width: 100%;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.title-contact a{
+  text-decoration: none;
+  color: black;
+  background-color: #c0ff72;
+  padding: 45px 50px;
+  font-family: "Magra", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  border-radius: 30px;
+  transition: 500ms;
+}
+.title-contact a:hover{
+  transform: scale(1.1);
+  background-color: #dbfeaf;
+  transition: 500ms;
+}
+.title-footer{
+  width: 80vw;
+}
+footer a{
+  text-decoration: none;
+  background-color: #c0ff72;
+  color: black;
 }
