@@ -9,33 +9,62 @@
 </head>
 
 <body>
-    <a class="home-link" href="/"><img class="arrow-icon" src="./img/arrow-left-line-svgrepo-com.svg" /></a>
-    <ul class="apartments-list" id="itemList"></ul>
+    <div class="apartments-page">
+
+        <!-- Filter -->
+        <div class="apartments-filter">
+            <form action="">
+                <select id="citySelect">
+                    <option value="">Berlin</option>
+                    <option value=""></option>
+                    <option value=""></option>
+                </select>
+                <select id="priceSelect">
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                </select>
+                <select id="sizeSelect">
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                </select>
+                <select id="roomsSelect">
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                </select>
+
+                <button class="apartment-search-btn">Search</button>
+            </form>
+        </div>
+        <a class="home-link" href="/"><img class="arrow-icon" src="./img/arrow-left-line-svgrepo-com.svg" /></a>
+        <ul class="apartments-list" id="itemList"></ul>
 
 
-    <script type="module">
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-app.js";
-        import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-database.js";
+        <script type="module">
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-app.js";
+            import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-database.js";
 
-        const firebaseConfig = {
-            databaseURL: "https://azubi-apartments-project-default-rtdb.firebaseio.com"
-        };
+            const firebaseConfig = {
+                databaseURL: "https://azubi-apartments-project-default-rtdb.firebaseio.com"
+            };
 
-        const app = initializeApp(firebaseConfig);
-        const db = getDatabase(app);
+            const app = initializeApp(firebaseConfig);
+            const db = getDatabase(app);
 
-        const list = document.getElementById("itemList");
+            const list = document.getElementById("itemList");
 
-        onValue(ref(db, "apartments"), (snapshot) => {
-            list.innerHTML = "";
+            onValue(ref(db, "apartments"), (snapshot) => {
+                list.innerHTML = "";
 
-            const data = snapshot.val();
+                const data = snapshot.val();
 
 
 
-            Object.values(data).map((item) => {
-                const li = document.createElement("li");
-                li.innerHTML = `
+                Object.values(data).map((item) => {
+                    const li = document.createElement("li");
+                    li.innerHTML = `
             <div class="apartment-container">
                 <img class="apartment-img" src=${item.images.main} />
                 <h2 class="apartment-title">${item.city}</h2>
@@ -46,10 +75,11 @@
                 </div>
                 <p class="apartment-description">${item.description}</p>
             </div> `;
-                list.appendChild(li);
+                    list.appendChild(li);
+                });
             });
-        });
-    </script>
+        </script>
+    </div>
 </body>
 
 </html>
