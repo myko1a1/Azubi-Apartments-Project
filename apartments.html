@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="apartments.css">
     <title>Azubi Apartments | Apartments</title>
 </head>
 
@@ -14,38 +14,48 @@
 
         <!-- Filter -->
         <div class="apartments-filter">
-            <form action="">
-                <select id="citySelect">
-                    <option value="Berlin" selected>Deutschlandweit</option>
-                    <option value="Berlin">Berlin</option>
-                    <option value="Potsdam">Potsdam</option>
-                    <option value="Oranienburg">Oranienburg</option>
-                    <option value="Erkner">Erkner</option>
-                    <option value="Stuttgart">Stuttgart</option>
-                    <option value="Düsseldorf">Düsseldorf</option>
-                    <option value="Brandenburg">Brandenburg</option>
-                    <option value="Ludwigsfelde">Ludwigsfelde</option>
-                    <option value="Leipzig">Leipzig</option>
-                    <option value="Dresden">Dresden</option>
-                    <option value="Frankfurt">Frankfurt</option>
-                    <option value="Hannover">Hannover</option>
-                </select>
-                <select id="priceSelect">
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                </select>
-                <select id="sizeSelect">
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                </select>
-                <select id="roomsSelect">
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                </select>
-
+            <form class="form-filter-apartments" action="">
+                <h2 class="apartments-filter-title">Apartments Filter</h2>
+                <label for="citySelect" class="label-city-filter">
+                    City
+                    <select id="citySelect" class="city-select">
+                        <option value="Berlin" selected>Deutschlandweit</option>
+                        <option value="Berlin">Berlin</option>
+                        <option value="Potsdam">Potsdam</option>
+                        <option value="Oranienburg">Oranienburg</option>
+                        <option value="Erkner">Erkner</option>
+                        <option value="Stuttgart">Stuttgart</option>
+                        <option value="Düsseldorf">Düsseldorf</option>
+                        <option value="Brandenburg">Brandenburg</option>
+                        <option value="Ludwigsfelde">Ludwigsfelde</option>
+                        <option value="Leipzig">Leipzig</option>
+                        <option value="Dresden">Dresden</option>
+                        <option value="Frankfurt">Frankfurt</option>
+                        <option value="Hannover">Hannover</option>
+                    </select>
+                </label>
+                <label for="priceSelect" class="label-price-filter">
+                    Price
+                    <select id="priceSelect" class="price-select">
+                        <option value="Al">All</option>
+                        <option value="600">600€</option>
+                        <option value="700">700€</option>
+                        <option value="900">900€</option>
+                        <option value="1100">1100€</option>
+                        <option value="1200">1200€</option>
+                        <option value="1300">1300€</option>
+                        <option value="1400">1400€</option>
+                    </select>
+                </label>
+                <label for="roomsSelect" class="label-room-filter">
+                    Rooms
+                    <select id="roomsSelect" class="room-select">
+                        <option value="All">All</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </label>
                 <button class="apartment-search-btn">Search</button>
             </form>
         </div>
