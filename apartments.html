@@ -81,21 +81,21 @@
 
                 const data = snapshot.val();
 
-
-
-                Object.values(data).map((item) => {
+                snapshot.forEach((child) => {
+                    const item = child.val();
+                    const key = child.key;
                     const li = document.createElement("li");
                     li.innerHTML = `
-            <div class="apartment-container">
-                <img class="apartment-img" src=${item.images.main} />
-                <h2 class="apartment-title">${item.city}</h2>
-                <div class="rating-price-container">
-                <p class="apartment-price">${item.monthly_cost_eur} €</p>
-                |
-                <p class="apartment-rating">${item.rating} <img class="icon-star" src="./img/star-icon.svg" /></p>
-                </div>
-                <p class="apartment-description">${item.description}</p>
-            </div> `;
+                        <div class="apartment-container" onclick="location.href='apartment-detail.html?id=${key}'">
+                            <img class="apartment-img" src=${item.images.main} />
+                            <h2 class="apartment-title">${item.city}</h2>
+                            <div class="rating-price-container">
+                                <p class="apartment-price">${item.monthly_cost_eur} €</p>
+                                |
+                                <p class="apartment-rating">${item.rating} <img class="icon-star" src="./img/star-icon.svg" /></p>
+                            </div>
+                            <p class="apartment-description">${item.description}</p>
+                        </div>`;
                     list.appendChild(li);
                 });
             });

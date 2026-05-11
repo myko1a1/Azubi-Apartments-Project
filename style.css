@@ -212,13 +212,13 @@ img.login-button {
   background-color: #c0ff72;
   padding: 20%;
   border-radius: 50%;
-  transition: 500ms;
+  transition: 200ms;
 }
 .link-button a:hover {
   background-color: #dbfeaf;
   padding: 20%;
   border-radius: 50%;
-  transition: 500ms;
+  transition: 200ms;
   transform: scale(1.1);
 }
 .link-button img {
@@ -266,12 +266,12 @@ img.login-button {
   font-size: 28px;
   text-decoration: none;
   color: black;
-  transition: 500ms;
+  transition: 200ms;
 }
 
 .add-apart-button-field a:hover {
   background-color: #dbfeaf;
-  transition: 500ms;
+  transition: 200ms;
   transform: scale(1.1);
 }
 footer {
@@ -533,12 +533,12 @@ footer {
   font-weight: 700;
   font-size: 18px;
   border-radius: 30px;
-  transition: 500ms;
+  transition: 200ms;
 }
 .title-contact a:hover {
   transform: scale(1.1);
   background-color: #dbfeaf;
-  transition: 500ms;
+  transition: 200ms;
 }
 .title-footer {
   width: 80vw;
@@ -547,4 +547,8 @@ footer a {
   text-decoration: none;
   background-color: #c0ff72;
   color: black;
+}
+.arrow-icon {
+  width: 45px;
+  height: 45px;
 }
