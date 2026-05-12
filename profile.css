@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Kite+One&family=Magra:wght@400;700&display=swap");
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+.content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.page-header {
+  width: 80vw;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+img.logo {
+  height: 10vh;
+  width: auto;
+}
+.arrow-icon {
+  width: 45px;
+  height: 45px;
+}
+.header-div{
+    width: 200px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-family: "Magra", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+}
+.header-div p{
+    margin-left: 20px;
+}
+.profile-info{
+    margin-top: 60px;
+    width: 80vw;
+    height: 45vh;
+    display: flex;
+}
+.left-side{
+    width: 70%;
+    height: 100%;
+}
+.right-side{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.profile-type{
+    width: 400px;
+    height: 65px;
+    border-radius: 20px;
+    background-color: #c0ff72;
+    display: flex;
+    align-items: center;
+}
+.profile-type p{
+    margin-left: 10px;
+    font-family: 'Kite One';
+    font-size: 28px;
+}
+.profile-names{
+    margin-top: 70px;
+    font-family: 'Magra';
+    font-weight: 700;
+    font-size: 42px;
+}
+.profile-names span{
+    font-family: 'Kite One';
+    font-weight: 400;
+    font-size: 28px;
+}
+.right-side img{
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    background-color: lightgray;
+}
+.profile-menu{
+    width: 80vw;
+    height: 35vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.profile-menu a{
+    width: 20%;
+    height: 80%;
+    background-color: #f2f2f2;
+    border-radius: 30px;
+    color: black;
+    text-decoration: none;
+    font-family: 'Magra';
+    font-weight: 700;
+    font-size: 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: 200ms;
+}
+.profile-menu p{
+    position: relative;
+    bottom: 25%;
+    right: 15%;
+}
+.profile-menu a:hover{
+    background-color: #c0ff72;
+    transition: 200ms;
+    transform: scale(1.05);
+}
