@@ -12,7 +12,7 @@
     <a class="home-link" href="/"><img class="arrow-icon" src="./img/arrow-left-line-svgrepo-com.svg" /></a>
     <div class="apartment-page">
 
-        <!-- Filter -->
+        <!-- City Filter -->
         <div class="apartments-filter">
             <form class="form-filter-apartments" action="">
                 <h2 class="apartments-filter-title">Apartments Filter</h2>
@@ -34,6 +34,7 @@
                         <option value="Hannover">Hannover</option>
                     </select>
                 </label>
+                <!-- Price Filter -->
                 <label for="priceSelect" class="label-price-filter">
                     Price
                     <select id="priceSelect" class="price-select">
@@ -48,10 +49,12 @@
                     </select>
                 </label>
 
+                <!-- Search Button -->
                 <button class="apartment-search-btn">Search</button>
             </form>
         </div>
 
+        <!-- Apartments List -->
         <ul class="apartments-list" id="itemList"></ul>
 
 
@@ -89,6 +92,7 @@
             function renderApartments(data) {
                 list.innerHTML = "";
 
+                // Add Apartment to List
                 data.forEach((item) => {
                     const li = document.createElement("li");
 

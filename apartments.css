@@ -44,6 +44,8 @@ li {
 }
 
 /* Apartments Selectors for Filter */
+
+/* City */
 .city-select {
   font-family: "Magra", sans-serif;
   font-weight: 300;
@@ -56,6 +58,7 @@ li {
   margin-top: 5px;
 }
 
+/* Price */
 .price-select {
   font-family: "Magra", sans-serif;
   font-weight: 300;
@@ -77,6 +80,7 @@ li {
   border: none;
 } */
 
+/* Room */
 .room-select {
   font-family: "Magra", sans-serif;
   font-weight: 300;
@@ -103,11 +107,14 @@ li {
   transition: background-color 200ms;
 }
 
+/* Search Button Filter | Hover */
 .apartment-search-btn:hover {
   background-color: #a2f340;
 }
 
 /* Labels for Inputs Filter */
+
+/* Price */
 .label-price-filter {
   font-family: "Magra", sans-serif;
   display: flex;
@@ -116,6 +123,7 @@ li {
   color: #030303;
 }
 
+/* Room */
 .label-room-filter {
   font-size: 15px;
   font-family: "Magra", sans-serif;
@@ -124,6 +132,7 @@ li {
   color: #030303;
 }
 
+/* City */
 .label-city-filter {
   font-size: 15px;
   font-family: "Magra", sans-serif;
@@ -143,6 +152,7 @@ li {
   cursor: pointer;
 }
 
+/* Apartment Container | Hover */
 .apartment-container:hover {
   background-color: #c0ff72;
   scale: 1.05;
