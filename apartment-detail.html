@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Azubi Apartaments | Detail</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body class="detail-page-body">
     <header class="page-header">
-        <a class="back-link" href="apartments.html"><img class="arrow-icon" src="./img/arrow-left-line-svgrepo-com.svg" /></a>
+        <a class="back-link" href="apartments.html"><img class="arrow-icon"
+                src="./img/arrow-left-line-svgrepo-com.svg" /></a>
         <a href="index.html"><img class="logo" src="./img/Logo.png" alt="Azubi-Apartments"></a>
     </header>
-    
-    <div id="content"><p>Die Seite wartet auf einen Antwort...</p></div>
+
+    <div id="content">
+        <p>Die Seite wartet auf einen Antwort...</p>
+    </div>
 
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-app.js";
@@ -38,10 +43,11 @@
                     <span> | Warmmiete | ${item.rating}</span>
                 </div>
                 <div class="detail-profile">
-                    <img class="profile-photo" src="${item.images.profile}"> 
-                    <p>Max <br> Mustermann</p>
+                    <img class="profile-photo" src="${item.landlord.photo}"> 
+                    <p>${item.landlord.name}</p>
                 </div> 
-                <p class="detail-description">${item.description}</p>
+                <p class="detail-description">${item.description
+                }</p>
                 <div class="title-contact">
                     <a href="#">Nachricht senden</a>
                 </div>
@@ -49,7 +55,10 @@
         })
     </script>
     <footer class="title-footer">
-        <p><a href="https://such-helper-for-azubi-apartaments.vercel.app/">Such-Helper</a><br><br> Azubi-Apartaments <br> 2026</p>
+        <p><a href="https://such-helper-for-azubi-apartaments.vercel.app/">Such-Helper</a><br><br> Azubi-Apartaments
+            <br> 2026
+        </p>
     </footer>
 </body>
+
 </html>
